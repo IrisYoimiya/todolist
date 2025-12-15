@@ -17,7 +17,7 @@ datasource db {
 
 model Task {
   id          Int       @id @default(autoincrement())
-  title       String    @db.varchar(255)
+  title       String    @db.VarChar(255)
   description String?   @db.Text   
   isCompleted Boolean   @default(false) 
   createdAt   DateTime  @default(now())  
