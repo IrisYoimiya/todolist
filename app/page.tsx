@@ -32,7 +32,8 @@ export default function Home() {
 
   async function addTask(e: React.FormEvent) {
     e.preventDefault();
-    if (!titleInput) return;
+    if (!titleInput)
+      return alert("Harap masukan task")
 
     await fetch("/api/tasks", {
       method: "POST",
